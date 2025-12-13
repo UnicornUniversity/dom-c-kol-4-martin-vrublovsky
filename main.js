@@ -192,7 +192,9 @@ export const calculateAverageWomenWorkload = (employees) => {
     }
   }
 
-  const averageWomenWorkload = femaleCount > 0 ? femaleWorkloadSum / femaleCount : 0;
+  const averageWomenWorkload = femaleCount > 0
+    ? Number((femaleWorkloadSum / femaleCount).toFixed(1))
+    : 0;
 
   return averageWomenWorkload;
 }
